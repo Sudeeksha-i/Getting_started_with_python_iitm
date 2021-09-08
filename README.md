@@ -5,7 +5,7 @@ Welcome to the notes wiki for course *Introduction to Programming in Python*
 
 Index:
 
-Week 1: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/wiki/Week-1
+Week 1: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/blob/main/Week%201.md
 
 Week 2
 
