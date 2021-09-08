@@ -3,9 +3,9 @@ A complete guide to learning the basics of Python.
 
 Welcome to the notes wiki for course *Introduction to Programming in Python*
 
-Main:  https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/wiki
+Index:
 
-Week 1: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/wiki/Week1
+Week 1: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/wiki/Week-1
 
 Week 2
 
