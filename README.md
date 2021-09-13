@@ -7,7 +7,7 @@ Index:
 
 Week 1: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/blob/main/Week%201.md
 
-Week 2
+Week 2: https://github.com/Sudeeksha-i/Getting_started_with_python_iitm/blob/main/Week%202.md
 
 Week 3
 
