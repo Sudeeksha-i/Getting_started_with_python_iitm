@@ -218,3 +218,223 @@ print(10 > x <=9) #prints 'True'
 print(5 == x > 4) #prints 'True'
 ```
 NOTE: every statement is to be satisfied to be 'True'
+
+# Escape characters and types of quotes
+
+## Escape Characters
+```python
+print('It's a beautiful day') #shows "SyntaxError: invalid syntax"
+```
+Computer doesn't diffrentiate between the 's and ''(single quotes) which are usually used in writing print statments
+
+It considers 'It' as a string and '')' as another string
+
+Solution for such errors:
+```python
+print("It's a beautiful day") #using double quotes
+```
+or using a escape charecter
+```python
+print('It\'s a beautiful day') #using backslash( \ ) 
+```
+This charecter ```\``` is refered as 'Escape Charecter'
+```python
+print("We are from "IIT" Madras) #shows "SyntaxError: invalid syntax"
+```
+Here computer thinks ```We are from``` and ``` Madras``` as strings leaving IIT
+```python
+print("We are from \"IIT\" Madras") #using ecsape charecter we can fix this
+```
+```python
+print("I am the author of this page. I am using markdown format") #prints are usually
+```
+But if we want to add extra space after the full stop we can use escape charecter like displayed below
+```python
+code:
+  print("I am the author of this page.\t I am using markdown format") #prints with space after fullstop
+```
+```
+output:
+  I am the author of this page.    I am using markdown format
+```
+```python
+code:
+  print("I am the author of this page.\n I am using markdown format") #prints 'I am using markdown format' in next line
+```
+```
+output:
+  I am the author of this page.
+  I am using markdown format
+```
+
+## Use of Quotes supported by python
+```python
+x = "this is a string"
+y = "this is also a string"
+print(x) #prints as usual
+print(y)
+```
+```python
+z ="first line
+second line
+third line"
+print(z)
+```
+It shows an error saying ```SyntaxError: EOL while scanning string literal```
+Where'EOL' == End Of the Line
+Here Computers keeps on searching the the quote to end in the same line
+A string is stored in single line
+```python
+a = '''First Line
+Second Line
+Third Line'''
+print(a) #prints all three line usually
+# 3' are used to store multiple line strings
+```
+```python
+'''
+triple qutoes can also be used for commenting as '#' to store mulitiple lines as '#' is only a single line comment
+'''
+```
+
+# String Methods
+
+Screenshots to be uploaded....
+
+# An Intresting Cipher: More on Strings
+```python
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+print(alpha[0]) #prints 'a'
+
+i = 0
+print(alpha[i]) #prints 'a'
+print(alpha[i+1]) #prints 'b'
+print(alpha[i+2]) #prints 'c'
+print(alpha[i+3]) #prints 'd'
+
+i = 10
+print(alpha[i]) #prints 'k'
+print(alpha[i+1]) #prints 'l'
+print(alpha[i+2]) #prints 'm'
+print(alpha[i+3]) #prints 'n'
+
+
+i = 20
+print(alpha[i]) #prints 'u'
+print(alpha[i+1]) #prints 'v'
+print(alpha[i+2]) #prints 'w'
+print(alpha[i+3]) #prints 'x'
+
+
+i = 25
+print(alpha[i]) #prints 'k'
+print(alpha[i+1]) #shows error 'IndexError: string index out of range'
+print(alpha[i+2]) #as max len of alpha is 25
+print(alpha[i+3])
+
+print(alpha[20]) #prints 'u'
+
+i = 30
+print(alpha[i%26]) #prints 'e' 
+#i.e reminder of 30 devided 26 which is 4 ==e
+print(alpha[4]) #prints 'e'
+
+i = 26
+print(alpha[i%26]) #prints 'a'
+
+i=24
+print(alpha[i]) #prints 'y'
+print(alpha[i+1]) #prints 'z'
+print(alpha[i+2]) #shows error 'IndexError: string index out of range'
+
+print(alpha[i]%26) #prints 'y'
+print(alpha[i+1]%26) #prints 'z'
+print(alpha[i+2]%26) #print 'a'
+
+#i%26 is rotating in index of alpha
+
+s = 'python'
+#We expect to output qzuipo
+#we need the next letter of the string s
+
+t = ""
+
+print(alpha.index(s[0])) #prints '15' 
+#i.e index of P in alpha
+
+t=t+(alpha[((alpha.index(s[0]))+1)%26]) #checks the next alpha by increasing the indexing 
+print(t) #print 'q'
+
+t=t+(alpha[((alpha.index(s[1]))+1)%26]) #t+(alpha.....) means concatenate previous value of 't' with new letter obtained
+print(t) #prints 'qz'
+
+#similarly
+t=t+(alpha[((alpha.index(s[2]))+1)%26])
+t=t+(alpha[((alpha.index(s[3]))+1)%26])
+t=t+(alpha[((alpha.index(s[4]))+1)%26])
+t=t+(alpha[((alpha.index(s[5]))+1)%26])
+print(t) #prints 'qzuipo'
+#Hence expected outcome is achevied with this code using the concepts learnet in this Chapter
+
+t = ''
+
+#example use of variables
+t = ''
+i=0
+k=1
+t=t+(alpha[((alpha.index(s[i]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+1]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+2]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+3]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+4]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+5]))+k)%26])
+print(t) #prints same result like before code
+
+#to shift the 's' 2 letters we can use the same code and simply cangeing the value of 'k' to 2
+
+t = ''
+i=0
+k=2
+t=t+(alpha[((alpha.index(s[i]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+1]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+2]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+3]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+4]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+5]))+k)%26])
+print(t) #prints 'ravjqp' i.e 's' shifted by 2 letters
+
+#we can use the same same code for multiple shifting by just changing the value of 'k'
+t = ''
+i=0
+k=3
+t=t+(alpha[((alpha.index(s[i]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+1]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+2]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+3]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+4]))+k)%26])
+t=t+(alpha[((alpha.index(s[i+5]))+k)%26])
+print(t) #prints 'sbwkrq'
+```
+This is popularly called Ceasar Cipher in cryptography
+
+# Introduction to the if statement
+
+## if condition
+Let us consider movie "Avengers". This is a 13+ movie.
+```python
+print("Please enter your date of birth")
+birth_year = int(input())
+
+current_year = 2021
+
+age = current_year-birth_year
+
+if (age<13):
+  print("You are under age, you cannot watch this movie.")
+  print("Wait untill you are old enough to watch this moive.")
+else:
+  print("You are old enough to watch Avengers, Enjoy!")
+  print("Dont forget to watch sequels and prequels")
+  
+print("Have a Nice time!") #this part excecutes no matter if 'if-statment' was satisfied or not
+```
