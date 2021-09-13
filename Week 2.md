@@ -2,7 +2,7 @@
 
 A progammer should always try to make variable 'self-explainatory'
 
-"#" is used to comment. Comment is not run my the computer
+```#``` is used to comment. Comment is not run my the computer
 
 ```python
 ram_bank_balance = 100000
@@ -29,3 +29,35 @@ print("The family has",final_value)
 Using comments is a good programmer practice.
 
 It makes everyone understand the code better.
+
+# Variable Revisited: Dynamic Typing
+
+We are trying to illustrate what we call the dynamic typing
+```python
+a = 10
+print(type(a)) #prints type of a i.e. 'int'
+
+a = "india"
+print(type(a)) #prints type of a i.e. 'str'
+# 'a' changes its type to the one it stores value of
+```
+This is called 'Dynamic Typing'
+
+```type``` of a variable is dynamic in python
+```python
+n = 10
+print(type(n)) #prints 'int'
+print(n) #prints 10
+n=n/2
+print(type(n)) #prints 'float'
+print(n) #prints 5.0 (float)
+```
+Note: python changes ```int``` to ```float``` on division even by 1
+```python
+m = 10
+print(type(m)) #prints 'int'
+print(m) #prints 10
+m=m/2
+print(type(m)) #prints 'float'
+print(m) #prints 10.0 (float)
+```
